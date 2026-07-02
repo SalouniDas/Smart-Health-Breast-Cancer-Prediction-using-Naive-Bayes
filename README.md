@@ -82,19 +82,9 @@ Ensure you have Python installed. You can install the required packages using:
 pip install pandas numpy scikit-learn matplotlib seaborn notebook
 ```
 ### Running the Project
-1. Clone this repository:
+Clone this repository:
 ```bash
 git clone [https://github.com/SalouniDas/Smart-Health-Breast-Cancer-Prediction-using-Naive-Bayes.git](https://github.com/SalouniDas/Smart-Health-Breast-Cancer-Prediction-using-Naive-Bayes.git)
-```
-
-2. Navigate to the directory:
-```bash
-cd Smart-Health-Breast-Cancer-Prediction-using-Naive-Bayes
-```
-
-3. Launch Jupyter Notebook:
-```bash
-jupyter notebook
 ```
 Open and run notebooks/NaiveBayes.ipynb.
 
@@ -119,8 +109,10 @@ All models were evaluated on the same train-test split using the Wisconsin Diagn
 ---
 
 ### 🔍 Key Insights & Discussion
-* **Why Naive Bayes?** While models like Logistic Regression or Decision Trees may offer slightly different accuracy profiles, Naive Bayes serves as an excellent baseline because it requires minimal training time and works exceptionally well with low variance.
-* **The Healthcare Context:** In medical diagnoses like breast cancer screening, **Recall** (minimizing False Negatives) is often prioritized over overall accuracy, as missing a malignant tumor is far more dangerous than running a follow-up test on a false positive.
+* **Why Naive Bayes?**
+While models like Logistic Regression or Decision Trees may offer slightly different accuracy profiles, Naive Bayes serves as an excellent baseline because it requires minimal training time and works exceptionally well with low variance.
+* **Why the Healthcare Context?**
+In medical diagnoses like breast cancer screening, **Recall** (minimizing False Negatives) is often prioritized over overall accuracy, as missing a malignant tumor is far more dangerous than running a follow-up test on a false positive.
 
 ---
 
