@@ -2,6 +2,7 @@
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Ubuntu&weight=600&size=22&pause=1200&color=1E40AF&center=true&vCenter=true&width=850&lines=Smart+Health%3A+Breast+Cancer+Prediction+%7C+Naive+Bayes;Data+Mining+Approach+for+Diagnostic+Classification;Wisconsin+Breast+Cancer+Dataset+(WDBC)+Analysis" alt="Typing SVG" />
 </p>
+
 ---
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
