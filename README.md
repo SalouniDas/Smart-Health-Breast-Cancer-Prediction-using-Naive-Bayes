@@ -64,8 +64,6 @@ Where:
 │   └── wdbc.csv                         # Raw Wisconsin Breast Cancer Dataset
 ├── notebooks/
 │   └── NaiveBayes.ipynb                 # Jupyter Notebook with full EDA & Model
-├── docs/
-│   └── Smart_Health_Paper.docx          # Project documentation/report
 ├── requirements.txt                     # Project dependencies
 └── README.md                            # Project documentation
 ```
