@@ -19,16 +19,22 @@ This repository contains a data mining project focused on predicting and classif
 ## 📌 Project Overview
 Early detection of breast cancer significantly increases the chances of successful treatment. This project implements a Gaussian Naive Bayes classifier to analyze clinical characteristics of breast mass features extracted from digitized images of fine needle aspirates (FNA).
 
-### Key Features:
-* **Exploratory Data Analysis (EDA):** Feature distribution, correlation matrix visualization, and dataset balancing checks.
-* **Data Preprocessing:** Handling missing values, feature scaling, and train-test splitting.
-* **Model Implementation:** Scikit-Learn's Gaussian Naive Bayes model.
-* **Evaluation Metrics:** Detailed analysis using Accuracy, Precision, Recall, F1-Score, and a Confusion Matrix.
+### 🚀 Key Features
+
+* **Exploratory Data Analysis (EDA):** Comprehensive analysis of the WDBC dataset including feature distribution modeling, correlation matrix heatmaps to detect multicollinearity, and class balance checks.
+* **Data Preprocessing Pipeline:** Automated pipeline handling missing value audits, feature scaling (Standardization), and stratified train-test splitting to maintain class proportions.
+* **Multi-Model Machine Learning Framework:** Implemented and optimized four distinct classification algorithms to bench-test baseline performance:
+  * 🧠 **Gaussian Naive Bayes** (Core Algorithm)
+  * 📈 **Logistic Regression**
+  * 🌲 **Decision Tree Classifier**
+  * 👥 **K-Nearest Neighbors (KNN)**
+* **Rigorous Evaluation Metrics:** Comparative performance analysis using cross-validation alongside multiple evaluation metrics including Accuracy, Precision, Recall (Sensitivity), F1-Score, and Confusion Matrix breakdowns to evaluate clinical safety (minimizing False Negatives).
 
 ---
 
 ## 📊 Dataset
 The project utilizes the **Wisconsin Diagnostic Breast Cancer (WDBC)** dataset. 
+🔗 https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
 * **Target Variable:** `Diagnosis` (M = Malignant, B = Benign)
 * **Features:** 30 real-valued features computed from nuclear characteristics (e.g., radius, texture, perimeter, area, smoothness, concavity).
 
@@ -94,21 +100,40 @@ Open and run notebooks/NaiveBayes.ipynb.
 
 ---
 
-## 📈 Results & Insights
-### 📊 Model Evaluation Results
 
-After training the Gaussian Naive Bayes model, the following performance metrics were achieved on the test dataset:
+## 📊 Model Comparison & Results
 
-| Metric | Score |
-| :--- | :--- |
-| **Accuracy** | 94.7% |
-| **Precision (Malignant)** | 93.5% |
-| **Recall / Sensitivity** | 92.1% |
-| **F1-Score** | 92.8% |
+To evaluate the effectiveness of the **Gaussian Naive Bayes** classifier, it was benchmarked against three other standard machine learning models: **Decision Tree**, **K-Nearest Neighbors (KNN)**, and **Logistic Regression**. 
 
-### Confusion Matrix Insights
-* **True Positives (TP):** Correctly identified malignant tumors.
-* **False Positives (FP):** Benign tumors misclassified as malignant (Type I Error).
-* **False Negatives (FN):** Malignant tumors misclassified as benign (Type II Error — *critical to minimize in healthcare!*).
+All models were evaluated on the same train-test split using the Wisconsin Diagnostic Breast Cancer dataset.
 
-Key Takeaways: Naive Bayes performs exceptionally well as a baseline classifier because of its speed and efficiency, despite its underlying assumption of feature independence.
+### 📈 Performance Comparison Matrix
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+| :--- | :---: | :---: | :---: | :---: |
+| **K-Nearest Neighbors (KNN)** | **96.49%** | **0.96** | **0.96** | **0.96** |
+| **Gaussian Naive Bayes** | 94.74% | 0.95 | 0.95 | 0.95 |
+| **Logistic Regression** | 93.86% | 0.94 | 0.94 | 0.94 |
+| **Decision Tree** | 93.86% | 0.94 | 0.94 | 0.94 |
+
+---
+
+### 🔍 Key Insights & Discussion
+* **Why Naive Bayes?** While models like Logistic Regression or Decision Trees may offer slightly different accuracy profiles, Naive Bayes serves as an excellent baseline because it requires minimal training time and works exceptionally well with low variance.
+* **The Healthcare Context:** In medical diagnoses like breast cancer screening, **Recall** (minimizing False Negatives) is often prioritized over overall accuracy, as missing a malignant tumor is far more dangerous than running a follow-up test on a false positive.
+
+---
+
+## 🔧 Future Extensions & Customization
+
+This repository is designed to be an extensible framework for clinical data mining. You can easily adapt or scale this project in the following ways:
+
+* **Incorporate Alternative Datasets:** Replace `wdbc.csv` in the `data/` folder with other clinical or oncology datasets (e.g., the MIAS Mammography dataset) to test model generalizability.
+* **Advanced Feature Engineering:** Experiment with Principal Component Analysis (PCA) or recursive feature elimination (RFE) to reduce the 30 dimensional feature space and see how it impacts Naive Bayes performance.
+* **Hyperparameter Tuning:** Utilize `GridSearchCV` to optimize hyperparameters for the benchmark models (such as tuning $k$ in KNN or adjusting the max depth of the Decision Tree).
+* **Alternative Naive Bayes Variants:** If you discretize the continuous clinical features into categorical bins, you can experiment with swapping `GaussianNB` out for `MultinomialNB` or `ComplementNB` to compare variations of the core algorithm.
+
+---
+## 👩‍💻 Author
+Salouni Das
+
