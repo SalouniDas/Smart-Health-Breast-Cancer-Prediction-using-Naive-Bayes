@@ -3,12 +3,15 @@
   <img src="https://readme-typing-svg.demolab.com?font=Ubuntu&weight=600&size=22&pause=1200&color=1E40AF&center=true&vCenter=true&width=850&lines=Smart+Health%3A+Breast+Cancer+Prediction+%7C+Naive+Bayes;Data+Mining+Approach+for+Diagnostic+Classification;Wisconsin+Breast+Cancer+Dataset+(WDBC)+Analysis" alt="Typing SVG" />
 </p>
 ---
+
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
 ![Jupyter Notebook](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=flat&logo=Jupyter)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-green)
+
+---
 
 This repository contains a data mining project focused on predicting and classifying breast cancer tumors as either **Malignant** or **Benign**. The project was developed as part of a Master's course curriculum utilizing the **Naive Bayes** classification algorithm.
 
